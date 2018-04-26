@@ -35,7 +35,7 @@ public class RatesPresenter implements RatesContract.Presenter {
 
                     @Override
                     public void onSuccess(RateResponse response) {
-                        if (view != null) view.showData(response.currencies);
+                        if (view != null) view.showData(response.getCurrencies());
                     }
 
                     @Override

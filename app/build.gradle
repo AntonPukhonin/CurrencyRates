@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'groovyx.android'
 
 android {
     compileSdkVersion 27
@@ -8,6 +9,10 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -45,4 +50,17 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     implementation "com.google.dagger:dagger:2.15"
     annotationProcessor "com.google.dagger:dagger-compiler:2.15"
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.9.0'
+
+    testImplementation 'org.codehaus.groovy:groovy-all:2.4.13'
+    testImplementation 'org.spockframework:spock-core:1.1-groovy-2.4'
+    testImplementation 'cglib:cglib-nodep:3.2.5'
+
+
+    testImplementation "org.mockito:mockito-core:2.18.3"
+
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
 }
