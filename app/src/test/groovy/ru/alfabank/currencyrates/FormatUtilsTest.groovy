@@ -18,6 +18,5 @@ class FormatUtilsTest2 extends Specification {
             "10.11"    || "10.11"
             "10.11"    || "10.11"
             "10.11"    || "10.11"
-            null       || null
     }
 }

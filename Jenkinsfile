@@ -10,7 +10,7 @@ pipeline {
                 sh("chmod +X gradlew")
             }
         }
-        stage("init"){
+        stage("lint"){
             steps{
                 sh("./gradlew lintPlayDebug")
             }
@@ -25,5 +25,9 @@ pipeline {
                 sh("./gradlew assemblePlayDebug")
             }
         }
+    }
+
+    post{
+
     }
 }
