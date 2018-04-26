@@ -12,6 +12,24 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            debuggable false
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+
+        play {
+            ext.enableCrashlytics = true
+        }
+
+        development {
+            ext.enableCrashlytics = false
         }
     }
 }
